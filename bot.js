@@ -1,5 +1,7 @@
 require('dotenv').config();
 const { Discord, GatewayIntentBits, Client } = require("discord.js");
+const discordToken = `${process.env['DISCORD_TOKEN']}`;
+
 const client = new Client({
     intents: [
         GatewayIntentBits.Guilds,
@@ -16,4 +18,4 @@ client.on("message", msg => {
         msg.reply("pong");
     }
 })
-client.login(process.env.DISCORD_TOKEN);
+client.login(discordToken);
