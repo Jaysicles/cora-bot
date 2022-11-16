@@ -1,6 +1,13 @@
 require('dotenv').config();
-const Discord = require("discord.js");
-const client = new Discord.Client({ intents: ["GUILDS", "GUILD_MESSAGES"] });
+const { Discord, GatewayIntentBits, Client } = require("discord.js");
+const client = new Client({
+    intents: [
+        GatewayIntentBits.Guilds,
+        GatewayIntentBits.DirectMessageTyping
+    ]
+});
+
+
 client.on("ready", () => {
     console.log(`Logged in as ${client.user.tag}!`)
 })
