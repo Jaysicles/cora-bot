@@ -22,6 +22,7 @@ const commandFolders = fs.readdirSync("./src/commands");
 
 client.on("ready", () => {
     console.log(`Logged in as ${client.user.tag}!`)
+    client.user.setActivity(`Protecting & Logging`, { type: "WATCHING" })
 })
 
 // For Testing
