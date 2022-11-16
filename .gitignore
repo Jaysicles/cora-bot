@@ -1,2 +1,2 @@
 # KEYS & API Tokens
-.env
+*.env
